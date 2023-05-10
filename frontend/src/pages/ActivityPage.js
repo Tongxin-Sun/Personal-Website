@@ -17,7 +17,7 @@ function ActivityPage({ setEditedActivity }){
         redirect("/edit-activity");
     }
     const onDeleteActivity = async _id => {
-        const response = await fetch(`/log/${_id}`, { method: 'DELETE' });
+        const response = await fetch(`https://tongxinsun.onrender.com/log/${_id}`, { method: 'DELETE' });
         if (response.status === 204) {
             const newActivity = activities.filter(a => a._id !== _id);
             setActivities(newActivity);
