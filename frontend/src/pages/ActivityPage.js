@@ -7,7 +7,7 @@ function ActivityPage({ setEditedActivity }){
     const redirect = useNavigate();
     const [activities, setActivities] = useState([]);
     const loadActivities = async () => {
-        const response = await fetch('https://tongxinsun.onrender.com/log');
+        const response = await fetch('/log');
         const activityList = await response.json();
         setActivities(activityList);
     }
