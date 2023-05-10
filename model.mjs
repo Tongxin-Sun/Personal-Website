@@ -7,10 +7,11 @@ mongoose.connect(
     { useNewUrlParser: true }
 );
 const db = mongoose.connection;
-console.log("Hello");
+
 // Confirm that the database has connected and print a message in the console.
 db.once("open", (err) => {
     if(err){
+	console.log("Hello");
         res.status(500).json({ error: '500:Connection to the server failed.' });
     } else  {
         console.log('Successfully connected to MongoDB Activities collection using Mongoose.');
