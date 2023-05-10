@@ -16,7 +16,7 @@ export const CreateActivity = () => {
 
     const addActivity = async () => {
         const newActivity = { name, description, date, startTime, endTime, length };
-        const response = await fetch('/log', {
+        const response = await fetch('https://tongxinsun.onrender.com/log', {
             method: 'post',
             body: JSON.stringify(newActivity),
             headers: {
@@ -25,10 +25,10 @@ export const CreateActivity = () => {
         });
         if(response.status === 201){
             /**alert(`A new activity has been added!`);**/
-            redirect("/log");
+            redirect("https://tongxinsun.onrender.com/log");
         } else {
             alert(`The activity you have logged is not added successfully, status code = ${response.status}`);
-            redirect("/log");
+            redirect("https://tongxinsun.onrender.com/log");
         }
     };
 
