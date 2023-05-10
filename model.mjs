@@ -7,7 +7,7 @@ mongoose.connect(
     { useNewUrlParser: true }
 );
 const db = mongoose.connection;
-
+console.log("Hello");
 // Confirm that the database has connected and print a message in the console.
 db.once("open", (err) => {
     if(err){
