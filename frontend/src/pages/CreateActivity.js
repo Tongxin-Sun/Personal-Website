@@ -24,11 +24,11 @@ export const CreateActivity = () => {
             },
         });
         if(response.status === 201){
-            /**alert(`A new activity has been added!`);**/
-            redirect("https://tongxinsun.onrender.com/log");
+            alert(`A new activity has been added!`);
+            redirect("/log");
         } else {
             alert(`The activity you have logged is not added successfully, status code = ${response.status}`);
-            redirect("https://tongxinsun.onrender.com/log");
+            redirect("/log");
         }
     };
 
