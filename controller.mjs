@@ -6,6 +6,9 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());  // REST needs JSON MIME type.
 
+const cors = require("cors");
+app.use(cors({origin:["https://tongxinsun.onrender.com"]}));
+
 // CREATE controller ******************************************
 app.post ('/log', (req,res) => { 
     activities.createActivity(
