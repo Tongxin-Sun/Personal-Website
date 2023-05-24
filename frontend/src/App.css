@@ -35,11 +35,11 @@
 }
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
 /*body {       /* Can alternatively define in html {} or :root {} */
-  background: url(images/background.jpg) no-repeat top right;
+  /*background: url(images/background.jpg) no-repeat top right;
   background-size: cover;
   background-attachment: fixed;*/
   background-color: var(--custom-color-light);
-  font-family: var(--custom-font-1); /* Define with at least one font name and its related generic family name.
+  font-family: var(--custom-font-1); /* Define with at least one font name and its related generic family name.*/
   margin: 0;
   
   padding: 3vmin;
