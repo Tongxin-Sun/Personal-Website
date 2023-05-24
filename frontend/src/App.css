@@ -34,10 +34,6 @@
   --custom-font-2: 'Alegreya', serif;
 }
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
-* {
-  position: relative;
-  box-sizing: border-box;
-}
 body {       /* Can alternatively define in html {} or :root {} */
   /*background: url(images/background.jpg) no-repeat top right;
   background-size: cover;
@@ -172,6 +168,8 @@ body {       /* Can alternatively define in html {} or :root {} */
 }
 
 .title {
+  position: relative;
+  box-sizing: border-box;
   padding-left: 1em;
   grid-column: 1 / -1;
   grid-row: 1;
@@ -643,6 +641,8 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
 }
 
 .image {
+  position: relative;
+  box-sizing: border-box;
   grid-row: 1;
   grid-column: 2;
   margin-left: -2rem;
