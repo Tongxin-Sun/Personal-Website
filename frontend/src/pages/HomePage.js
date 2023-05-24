@@ -4,12 +4,23 @@ import { AiFillHome } from 'react-icons/ai';
 function HomePage() {
     return (
         <>
-            <header className="App-header">
-                <h1>
-                    <div className="h1-p1">Hi, This is</div> 
-                    <div className="h1-p2">TONGXIN SUN.</div>
-                </h1>
-            </header>
+        <header className="App-header">
+            <h1>
+                <div className="title">
+                    <div className="title-inner">
+                        <div className="cafe">
+                            <div className="cafe-inner">Tongxin</div>
+                        </div>
+                        <div className="mozart">
+                            <div className="mozart-inner">Sun</div>
+                        </div>
+                    </div>
+                </div>
+            </h1>
+            <div className="image">
+                <img className="background-image" src='https://images.unsplash.com/photo-1616362355051-6a9f8c434fff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzE0MTYzNQ&ixlib=rb-1.2.1&q=80&w=800&h=600' alt=''/>
+    </div>
+        </header>
             {/*<h2><i><AiFillHome/></i>WELCOME!</h2>
             <p>This is my website portfolio. Feel free to explore!</p>
             <article>

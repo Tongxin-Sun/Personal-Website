@@ -27,49 +27,247 @@
   --custom-color-light:#F0F0F0;
   --custom-color-light-opaque: #f0e3d3ff;
   --custom-color-medium:#8C241B;
-  --custom-color-dark: #3C486B;
+  --custom-color-dark: rgb(61, 72, 108);
   --custom-accent-color-1: #F9D949;
   --custom-accent-color-2: #F45050;
   --custom-font-1: 'Roboto Slab', serif;
   --custom-font-2: 'Alegreya', serif;
 }
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+
 body {       /* Can alternatively define in html {} or :root {} */
   /*background: url(images/background.jpg) no-repeat top right;
   background-size: cover;
   background-attachment: fixed;*/
   background-color: var(--custom-color-light);
   font-family: var(--custom-font-1); /* Define with at least one font name and its related generic family name.*/
-  margin: 0 auto;
-  padding: 0;
+  margin: 0;
+  
+  padding: 3vmin;
   color: var(--custom-color-dark);
-  line-height: 2em;
   max-width: 2000px;
   min-width: 1100px;
+  min-height: 100vh;
+  display: grid;
 }
 
+.area{
+  background: var(--custom-color-light);
+  background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+  width: 100%;
+  height: 0;
+}
+.circles{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li{
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(61, 72, 108, 0.2);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+  
+}
+
+.circles li:nth-child(1){
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+@keyframes animate {
+
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+
+}
+.title {
+  padding-left: 1em;
+  grid-column: 1 / -1;
+  grid-row: 1;
+
+  font-family: "Prata", serif;
+  font-size: 7vw;
+  width: 100%;
+  z-index: 20;
+
+  > .title-inner {
+    display: inline-block;
+  }
+}
+
+@keyframes text-clip {
+  from {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes outer-left {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes inner-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.cafe,
+.mozart {
+  animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
+  
+}
+
+
+.title-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both;
+}
+
+.cafe-inner {
+  display: inline-block;
+  animation: inner-left 1s 1s ease both,
+    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.mozart-inner {
+  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+}
+
+.title {
+  animation: outer-left 1s 1s ease both;
+}
+
+.cafe {
+  // start
+  > .cafe-inner {
+    display: inline-block;
+  }
+}
+
+.mozart {
+  display: inline-block;
+}
 /*  ----- Page layout blocks -----  */
 header {
   background-color: var(--custom-color-light);
   /*padding-bottom: 5%;
   text-align: center;*/
   margin: 0;
+  z-index: 100;
+
+  &:hover {
+    opacity: 0.5;
+  }
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-bottom: 4vmin;
+  height: 90vh;
+  width: 100%;
+  background: #ede8e2;
+  color: #3a3535;
 }
 
-.h1-p1 {
-  border: 5px solid var(--custom-accent-color-1);
-  margin: 10%;
-  background-color: var(--custom-accent-color-1);
-  color: var(--custom-color-dark);
-}
-
-.h1-p2 {
-  color: var(--custom-accent-color-2);
-  margin: auto;
-  width: 50%;
-}
 main {
-  background-color: var(--custom-color-light);
   padding: 3% 2%;
   margin: 0 7%;
   font-size: 120%;
@@ -88,11 +286,19 @@ aside {}*/
 footer {
   background-color: var(--custom-color-dark);
   color: var(--custom-color-light);
-  margin: auto 0 0 0;
   padding: 1%;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 7vh;
   /*border-top: 3px solid var(--custom-color-medium);*/
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+footer p {padding: 1vw;}
+
 
 /* ----- Anchors ----- Text links */
 
@@ -104,7 +310,7 @@ a:visited {}
 */
 /*  ----- Navigation ----- Override text links for navigation only.  */
 nav {
-  background-color: var(--custom-color-light);
+  background-color: transparent;
   padding: 0;
   margin: 3% 7% 0 7%;
   /*border-top: 3px solid var(--custom-color-medium);
@@ -191,7 +397,6 @@ dd {}
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--custom-font-2);
   margin: 0;} 
-h1 {font-size: 6em;}
 
 
 /*
@@ -431,6 +636,29 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
   bottom: 0;
   text-align: left;
 }
+
+.image {
+  grid-row: 1;
+  grid-column: 2;
+  margin-left: -2rem;
+  opacity: 0.7;
+
+  animation: image-in 1s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+
+  @keyframes image-in {
+    from {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    to {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+.background-image {
+  display: block;
+  width: auto;
+  height: 100%;
+}}
 /*svg {}
 picture {}
   source {}
@@ -526,3 +754,7 @@ object {}
     transform: rotate(360deg);
   }
 }
+.App {width: 100%;
+  position: absolute;
+  top:0vh;
+  height: 100%;}

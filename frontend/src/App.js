@@ -14,20 +14,19 @@ import ActivityPage from './pages/ActivityPage';
 import CreateActivity from './pages/CreateActivity';
 import EditActivity from './pages/EditActivity';
 import TopicsPage from './pages/TopicsPage';
+import { BsLinkedin } from "react-icons/bs";
 
 function App() {
   // Use state to bring in the data
   const [editedActivity, setEditedActivity] = useState();
   return (
     <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
         <Nav/>
-        <Routes>
-          <Route path='/' element={<HomePage/>}/>
-        </Routes>
         <main>
           <section>
             <Routes>
+              <Route path='/' element={<HomePage/>}/>
               <Route path='/log' element={<ActivityPage setEditedActivity={setEditedActivity}/>}/>
               <Route path='/add-activity' element={<CreateActivity/>}/>
               <Route path='topics' element={<TopicsPage/>}/>
@@ -38,8 +37,25 @@ function App() {
             </Routes>
           </section>
         </main>
+        <div class="area" >
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div >
         <footer>
           <p>&copy; 2023 Tongxin Sun</p>
+          <p>Email: tongxinsun16@gmail.com</p>
+          <p>Tel: 6502356613</p>
+          <BsLinkedin size={30} onClick={() => window.open('https://www.linkedin.com/in/tongxin-sun-695972102/')} onMouseOver={({target})=>target.style.cursor="pointer"} style={{padding: '1vw'}}/>
         </footer>
       </BrowserRouter>
     </div>
