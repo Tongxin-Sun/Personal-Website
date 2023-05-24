@@ -252,6 +252,9 @@ header {
   /*padding-bottom: 5%;
   text-align: center;*/
   margin: 0;
+  
+}
+.header {
   z-index: 100;
 
   &:hover {
