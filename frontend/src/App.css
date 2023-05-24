@@ -168,7 +168,7 @@ body {       /* Can alternatively define in html {} or :root {} */
   }
 
 }
-/*
+
 .title {
   padding-left: 1em;
   grid-column: 1 / -1;
@@ -182,7 +182,7 @@ body {       /* Can alternatively define in html {} or :root {} */
   > .title-inner {
     display: inline-block;
   }
-}*/
+}
 
 @keyframes text-clip {
   from {
@@ -238,7 +238,7 @@ body {       /* Can alternatively define in html {} or :root {} */
 }
 
 .cafe {
-  // start
+  
   > .cafe-inner {
     display: inline-block;
   }
