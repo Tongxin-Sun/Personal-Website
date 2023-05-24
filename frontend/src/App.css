@@ -655,8 +655,8 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
 
 .background-image {
   display: block;
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
 }}
 /*svg {}
 picture {}
