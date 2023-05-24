@@ -661,7 +661,7 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }}
 /*svg {}
@@ -759,7 +759,7 @@ object {}
     transform: rotate(360deg);
   }
 }
-/*.App {width: 100%;
+.App {width: 100%;
   position: absolute;
   top:0vh;
-  height: 100%;}*/
+  height: 100%;}
