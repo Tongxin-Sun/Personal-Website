@@ -47,7 +47,6 @@ body {       /* Can alternatively define in html {} or :root {} */
   color: var(--custom-color-dark);
   max-width: 2000px;
   min-width: 1100px;
-  min-height: 100vh;
   display: grid;
 }
 
