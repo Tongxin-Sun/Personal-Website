@@ -255,6 +255,7 @@ header {
   
 }
 .header {
+  box-sizing: border-box;
   z-index: 100;
 
   &:hover {
