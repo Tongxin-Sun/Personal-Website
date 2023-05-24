@@ -170,7 +170,7 @@ body {       /* Can alternatively define in html {} or :root {} */
 }
 .title {
   padding-left: 1em;
-  grid-column: 1 / -1;
+  
   grid-row: 1;
 
   font-family: "Prata", serif;
