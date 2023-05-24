@@ -4,7 +4,6 @@ import { AiFillHome } from 'react-icons/ai';
 function HomePage() {
     return (
         <>
-        <header className="App-header">
             <div className="header">
                 <div class="title">
                     <div class="title-inner">
@@ -21,7 +20,6 @@ function HomePage() {
                     <img src='https://images.unsplash.com/photo-1616362355051-6a9f8c434fff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzE0MTYzNQ&ixlib=rb-1.2.1&q=80&w=800&h=600' alt=''className="background-image"/>
                 </div>
             </div>
-        </header>
             {/*<h2><i><AiFillHome/></i>WELCOME!</h2>
             <p>This is my website portfolio. Feel free to explore!</p>
             <article>
