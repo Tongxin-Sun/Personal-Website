@@ -34,7 +34,7 @@
   --custom-font-2: 'Alegreya', serif;
 }
 /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
-body {       /* Can alternatively define in html {} or :root {} */
+/*body {       /* Can alternatively define in html {} or :root {} */
   /*background: url(images/background.jpg) no-repeat top right;
   background-size: cover;
   background-attachment: fixed;*/
@@ -47,7 +47,7 @@ body {       /* Can alternatively define in html {} or :root {} */
   max-width: 2000px;
   /*min-width: 1100px;*/
   display: grid;
-}
+}*/
 
 .area{
   background: var(--custom-color-light);
