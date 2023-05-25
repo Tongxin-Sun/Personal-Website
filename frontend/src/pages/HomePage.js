@@ -8,10 +8,10 @@ function HomePage() {
                 <div className="title">
                     <div className="title-inner">
                         <div className="cafe">
-                            <div className="cafe-inner">Keyframé</div>
+                            <div className="cafe-inner">Tongxin</div>
                         </div>
                         <div className="mozart">
-                            <div className="mozart-inner">Artistes</div>
+                            <div className="mozart-inner">Sun</div>
                         </div>
                     </div>
                 </div>
