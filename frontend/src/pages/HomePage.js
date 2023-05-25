@@ -1,5 +1,4 @@
 import React from "react";
-import { AiFillHome } from 'react-icons/ai';
 
 function HomePage() {
     return (
@@ -17,7 +16,7 @@ function HomePage() {
                 </div>
             
                 <div className="image">
-                    <img className="background-image" src='https://images.unsplash.com/photo-1616362355051-6a9f8c434fff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzE0MTYzNQ&ixlib=rb-1.2.1&q=80&w=800&h=600' alt=''/>
+                    {/*<img className="background-image" src='https://images.unsplash.com/photo-1616362355051-6a9f8c434fff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzE0MTYzNQ&ixlib=rb-1.2.1&q=80&w=800&h=600' alt=''/>*/}
                 </div>
             </div>
             {/*<h2><i><AiFillHome/></i>WELCOME!</h2>

@@ -240,11 +240,15 @@ body:active * {
 
 .cafe-inner {
   display: inline-block;
+  text-shadow: 2px 2px 4px var(--custom-color-dark);
+  color: var(--custom-accent-color-1);
   animation: inner-left 1s 1s ease both,
     text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .mozart-inner {
+  text-shadow: 2px 2px 4px var(--custom-accent-color-1);
+  color: var(--custom-color-dark);
   animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
@@ -660,16 +664,13 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
   box-sizing: border-box;
   grid-row: 1;
   grid-column: 2;
-  margin-left: -2rem;
-  opacity: 0.6;
-  }
-
-.background-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  margin-left: 2rem;
+  opacity: 0.4;
+  width: 50vw;
+  height: 79vh;
+  background-color: #F45050;
   animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
-}
+  }
 
 @keyframes image-in {
   from {
