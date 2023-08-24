@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -37,20 +36,7 @@ function App() {
             </Routes>
           </section>
         </main>
-        <div class="area" >
-          <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div >
+        
         <footer>
           <p>&copy; 2023 Tongxin Sun</p>
           <p>Email: tongxinsun16@gmail.com</p>
@@ -58,7 +44,7 @@ function App() {
           <BsLinkedin size={30} onClick={() => window.open('https://www.linkedin.com/in/tongxin-sun-695972102/')} onMouseOver={({target})=>target.style.cursor="pointer"} style={{padding: '1vw'}}/>
         </footer>
       </BrowserRouter>
-    </div>
+  </div>
   );
 }
 

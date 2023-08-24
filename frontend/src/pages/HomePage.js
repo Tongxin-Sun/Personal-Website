@@ -7,17 +7,24 @@ function HomePage() {
                 <div className="title">
                     <div className="title-inner">
                         <div className="cafe">
-                            <div className="cafe-inner">Tongxin</div>
+                            <div className="cafe-inner">Hey</div>
+                            <div className="mozart-inner">there</div>
                         </div>
-                        <div className="mozart">
-                            <div className="mozart-inner">Sun</div>
-                        </div>
+                        {/*<div className="mozart">
+                            <div className="mozart-inner">THERE</div>
+    </div>*/}
                     </div>
                 </div>
             
                 <div className="image">
-                    {/*<img className="background-image" src='https://images.unsplash.com/photo-1616362355051-6a9f8c434fff?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxNzE0MTYzNQ&ixlib=rb-1.2.1&q=80&w=800&h=600' alt=''/>*/}
+                    <img className="background-image" src='/images/profile.jpg' alt=''/>
+                    <p className="introduction">
+                        Hi, my name Tongxin Sun. I am a Post-bacc computer science student from Oregon State University. <br/> This
+                        is the website that I built in the course CS290: Web Development. It is a full-stack MERN application. I will 
+                        continuously improve and maintain this website. Feel free to explore different pages of this website! <br/> 
+                    </p>
                 </div>
+                
             </div>
             {/*<h2><i><AiFillHome/></i>WELCOME!</h2>
             <p>This is my website portfolio. Feel free to explore!</p>
@@ -55,6 +62,20 @@ function HomePage() {
                     </dl> 
                 </p>
     </article>*/}
+    <div class="area" >
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+  </div >
         </>);}
 
 export default HomePage;

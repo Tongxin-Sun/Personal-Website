@@ -1,4 +1,4 @@
-'use strict';
+
 
 // Define a JavaScript object with arrays of products, their company names, and prices: 
 const products = [
