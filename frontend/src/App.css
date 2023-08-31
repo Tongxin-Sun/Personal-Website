@@ -183,7 +183,7 @@ body:active * {
 
 }
 
-.title {
+.welcome {
   position: relative;
   box-sizing: border-box;
   padding-left: 1em;
@@ -193,7 +193,7 @@ body:active * {
   font-family: "Prata", serif;
   font-size: 7vw;
   width: 100%;
-  z-index: 20;
+  z-index: 0;
 
   > .title-inner {
     display: inline-block;
@@ -230,32 +230,34 @@ body:active * {
 .cafe,
 .mozart {
   animation: outer-left 1s 1s cubic-bezier(0.5, 0, 0.1, 1) both;
-  
 }
 
 
 .title-inner {
   display: inline-block;
-  animation: inner-left 1s 1s ease both;
+  animation: inner-left 1s 1s ease forwards;
+  animation-iteration-count: 1;
 }
 
-.cafe-inner {
+.hey {
   display: inline-block;
   text-shadow: 2px 2px 4px var(--custom-color-dark);
-  color: var(--custom-accent-color-1);
-  animation: inner-left 1s 1s ease both,
-    text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
+  color: var(--custom-accent-color-1);}
+.animate {
+  animation: text-clip 2s;
+  animation-iteration-count: 1;
 }
 
-.mozart-inner {
+.there {
   text-shadow: 2px 2px 4px var(--custom-accent-color-1);
   color: var(--custom-color-dark);
-  animation: text-clip 1s 0s cubic-bezier(0.5, 0, 0.1, 1) both;
 }
 
 .title {
-  animation: outer-left 1s 1s ease both;
+  animation: outer-left 1s 1s ease;
+  border: 1px solid black;
 }
+.title-inner {border: 1px solid black;}
 
 .cafe {
   
@@ -273,10 +275,9 @@ header {
   /*padding-bottom: 5%;
   text-align: center;*/
   margin: 0;
-  
 }
 .header {
-  z-index: 100;
+  z-index: -2;
 
   /*&:hover {
     opacity: 0.5;
@@ -285,7 +286,7 @@ header {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   padding-bottom: 4vmin;
-  height: 90vh;
+  /*height: 90vh;*/
   width: 100%;
   background: #ede8e2;
   color: #3a3535;
@@ -661,11 +662,58 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
   bottom: 0;
   text-align: left;
 }
-.introduction {
-  padding: 5%;
+.introduction, .technologies {
+  padding: 0 5% 0 5%;
   font-family: 'Roboto', sans-serif;
   line-height: 200%;
+  z-index: 30;
 }
+.technologies {display: flex; flex-wrap: wrap;}
+dt {
+  font-weight: bold;
+  flex: initial;
+  /*border-radius: 50%;*/
+  padding: 0.3em 1em;
+  margin: 0.3em;
+}
+
+dt {
+  background:
+    linear-gradient(
+      to right,
+      rgba(218, 64, 64, 0),
+      rgba(218, 64, 64, 0)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  background-color: #ffffff66;
+  z-index: 200; 
+  display: inline-block; 
+  cursor: pointer;
+  border-radius: 5%;
+}
+dd {
+  display: none;
+  position: relative;
+  margin-bottom: 0;
+  background-color: white; 
+  z-index: 200;
+  padding: 0.3em 1em;
+  opacity: 0.7;
+  font-weight: bold;
+  margin: 1em;
+}
+dt:hover {
+  background-size: 0 3px, 100% 3px;}
+
 .image {
   position: relative;
   box-sizing: border-box;
@@ -673,9 +721,10 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
   grid-column: 2;
   margin-left: 2rem;
   width: 50vw;
-  height: 79vh;
+  /*height: 79vh;*/
   background-color: rgba(244, 80, 80, 0.2);
-  animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;
+  /*animation: image-in 2s cubic-bezier(0.5, 0, 0.1, 1) 2s backwards;*/
+  z-index: 1;
   }
 .background-image {
   position: relative;
@@ -693,6 +742,7 @@ td[colSpan="6"] {text-align: center; padding: 10px; padding-top: 20px;}
   max-width: 100%;
   height: auto;
   display: block;
+  z-index: 1;
 }
 @keyframes image-in {
   from {
