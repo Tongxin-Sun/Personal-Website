@@ -30,6 +30,7 @@ function HomePage() {
         }
 
         // Sets the definition element that we want to show to be block display.
+       element.nextElementSibling.style.animation = 'text-clip 2s';
        element.nextElementSibling.style.display = 'block';
         }
 
@@ -69,37 +70,75 @@ function HomePage() {
                         <p className="introduction">This website is built with the following technologies:</p>
                             <dl className="technologies">
                                 <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>HTTP</dt>
-                                <dd>CSS stands for Cascading Style Sheets. It is used for styling the website to improve its usability, accessibility, readability and legibility.</dd>
-                                <dt>URL</dt>
-                                <dd>Placeholder</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>HTML</dt>
-                                <dd>HTML stands for HyperText Markup Language. The current version of HTML is <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> and 
-                                the standard is available <a href="https://html.spec.whatwg.org/">here</a>. It is used for structuring the website.
+                                <dd>
+                                    <span style={{fontWeight: "bold"}}>HTTP</span> (<span style={{fontWeight: "bold"}}>H</span>yper
+                                    <span style={{fontWeight: "bold"}}>T</span>ext<span style={{fontWeight: "bold"}}>T</span>ransfer 
+                                    <span style={{fontWeight: "bold"}}>P</span>rotocal) is a protocol that describes how to exchange 
+                                    messages. Specifically, it is a protocol that describes the details of how:{<br/>}
+                                    <ul>
+                                        <li>A program called the client can send a request (e.g., to retrieve a document) to</li>
+                                        <li>Another program called the server which sends back a response (e.g., containing the requested document) 
+                                            back to the client.
+                                        </li>
+                                    </ul>
                                 </dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>CSS</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>URL</dt>
+                                <dd>
+                                    <span style={{fontWeight: "bold"}}>URL</span> (<span style={{fontWeight: "bold"}}>U</span>niform 
+                                    <span style={{fontWeight: "bold"}}>R</span>esource <span style={{fontWeight: "bold"}}>L</span>ocator) 
+                                    is a naming infrastructure to represent documents, or more formally resources, located on the web. We 
+                                    commonly call a URL a web address. {<br/>}
+                                    <ul>
+                                        <li>To request a document, a client uses the document's URL to send an HTTP request to that server 
+                                            that hosts the requested document.</li>
+                                        <li>Typically the client and server programs run on different machines. In such cases, the URL identifies 
+                                            both the machine on which the server is running as well as the specific document among all the 
+                                            other documents hosted by that server. The URL naming infrastructure thus allows retrieval of 
+                                            documents that are located across geographically distant places, i.e., across a wide area. 
+                                        </li>
+                                    </ul>
+                                </dd>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>HTML</dt>
+                                <dd>
+                                    <span style={{fontWeight: "bold"}}>HTML</span> (<span style={{fontWeight: "bold"}}>H</span>yper
+                                    <span style={{fontWeight: "bold"}}>T</span>ext <span style={{fontWeight: "bold"}}>M</span>arkup <span style={{fontWeight: "bold"}}>L</span>
+                                    anguage) is a markup language for describing documents that can be retrieved over the web. 
+                                    <ul>
+                                        <li>The term hypertext means text which contains links to other texts.</li>
+                                        <li>HTML supports describing hypermedia documents, i.e., documents that besides text, can also contain 
+                                            other media such as graphics, video, and sound.
+                                        </li>   
+                                        <li>A client interprets the HTML in a document it receives in the HTTP response from the server and displays the document.</li> 
+                                    </ul>
+                                    The current version of HTML is <a href="https://en.wikipedia.org/wiki/HTML5">HTML5</a> and 
+                                    the standard is available <a href="https://html.spec.whatwg.org/">here</a>.
+                                </dd>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>CSS</dt>
                                 <dd>CSS stands for Cascading Style Sheets. It is used for styling the website to improve its usability, accessibility, readability and legibility.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>JavaScript</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>JavaScript</dt>
                                 <dd>Initially named LiveScript, JavaScript is the programming language used for the web in order to create dynamic web applications.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>Node</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Node</dt>
                                 <dd>Node.js (written in JavaScript) is widely used for developing server-side applications.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>Express</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Express</dt>
                                 <dd>Express is one of the popular frameworks developed for building web applications using Node.js.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>React</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>React</dt>
                                 <dd><a href="https://react.dev/learn/start-a-new-react-project">React</a> is a framework for writing front-end applications. Applications built in React are based on different components, which are reusable units of UI.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>React Icons</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>React Icons</dt>
                                 <dd>React Icons is a library containing hundreds of <a href="https://react-icons.github.io/react-icons/">icons</a> as React components.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>MongoDB</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>MongoDB</dt>
                                 <dd>MongoDB is a document-oriented database management system that helps to manage the database of a website.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>Mongoose</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Mongoose</dt>
                                 <dd><a href="https://www.npmjs.com/package/mongoose">Mongoose</a> is a JavaScript library that provides a syntactic layer between the data in a database's collection of 
                                     documents and the objects in a Node app. It is used to interact with MongoDB.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>REST API</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>REST API</dt>
                                 <dd><a href="https://www.restapitutorial.com/lessons/httpmethods.html">REST</a> stands for Representational State Transfer. It is a guideline for implementing web services.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>Image Optimization</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Image Optimization</dt>
                                 <dd>Optimized images for online viewing can reduce the time for a browser to display an image file in its correct size.</dd>
-                                <dt onClick={(e) => {showDefinition(e.target)}}>Google Fonts</dt>
+                                <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Google Fonts</dt>
                                 <dd><a href="https://fonts.google.com/">Google Fonts</a> is a web font service that provides us with free and open-source font families to use on a website.</dd>
                             </dl> 
+
+                            <p className="credits">*All the technology descriptions above are credited to the CS 290 course module from Oregon State University.</p>
                     
                 </div>
                 
