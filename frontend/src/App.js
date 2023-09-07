@@ -14,6 +14,7 @@ import CreateActivity from './pages/CreateActivity';
 import EditActivity from './pages/EditActivity';
 import TopicsPage from './pages/TopicsPage';
 import { BsLinkedin } from "react-icons/bs";
+import logo from './logo192.png'
 
 function App() {
   // Use state to bring in the data
@@ -21,7 +22,11 @@ function App() {
   return (
     <div className="App">
     <BrowserRouter>
-        <Nav/>
+        <header>
+          <span className="logo-span"><img className="App-logo" src={logo} alt="Logo"/></span>
+          <Nav/>
+        </header>
+        
         <main>
           <section>
             <Routes>

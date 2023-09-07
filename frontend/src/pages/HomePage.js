@@ -114,7 +114,15 @@ function HomePage() {
                                     the standard is available <a href="https://html.spec.whatwg.org/">here</a>.
                                 </dd>
                                 <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>CSS</dt>
-                                <dd>CSS stands for Cascading Style Sheets. It is used for styling the website to improve its usability, accessibility, readability and legibility.</dd>
+                                <dd>
+                                    <span style={{fontWeight: "bold"}}>CSS</span> (<span style={{fontWeight: "bold"}}>C</span>ascading 
+                                    <span style={{fontWeight: "bold"}}>S</span>tyle <span style={{fontWeight: "bold"}}>S</span>heets is a language used 
+                                    for describing the presentation of documents on the web while HTML continues to be used for describing the structure 
+                                    of the documents. It is used for styling the website to improve its usability, accessibility, readability and legibility. 
+                                    Multiple webpages on a website can have the same look and feel by sharing CSS files, while the same 
+                                    webpage can have different presentation for different screen sizes by using a different CSS file based on the screen 
+                                    size.
+                                </dd>
                                 <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>JavaScript</dt>
                                 <dd>Initially named LiveScript, JavaScript is the programming language used for the web in order to create dynamic web applications.</dd>
                                 <dt title='Click to show the description!' onClick={(e) => {showDefinition(e.target)}}>Node</dt>

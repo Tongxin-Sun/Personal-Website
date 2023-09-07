@@ -346,7 +346,7 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: right;
   align-items: flex-end;
   align-content: flex-start;
   border-bottom-style: groove;
@@ -757,6 +757,7 @@ dt:hover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }}
 
+
 /*svg {}
 picture {}
   source {}
@@ -811,23 +812,23 @@ object {}
 }*/
 .logo-span {
   position: absolute;
-  left: 93%;
-  right: 7%;
+  right: 93%;
+  left: 7%;
   margin: 0;
-  -ms-transform: translate(-40%, -15%);
-  transform: translate(-40%, -15%);
+  /*-ms-transform: translate(-40%, -15%);
+  transform: translate(-40%, -15%);*/
 }
 
 .App-logo {
-  height: 7vmin;
+  height: 14vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/*@media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+}*/
 /*
 .App-header {
   background-color: #282c34;

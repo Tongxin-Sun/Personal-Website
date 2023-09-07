@@ -28,24 +28,6 @@ const images = [
     originalHeight: '450px',
     },
     {
-    original: 'images/diy-notebook-design.jpg',
-    thumbnail: 'images/diy-notebook-design.jpg',
-    description: `DIY notebook design (2019)`,
-    originalHeight: '450px',
-    },
-    {
-    original: 'images/knitted-baby-hat.jpg',
-    thumbnail: 'images/knitted-baby-hat.jpg',
-    description: `A knitted baby hat (2021)`,
-    originalHeight: '450px',
-    },
-    {
-    original: 'images/lego-flower.jpg',
-    thumbnail: 'images/lego-flower.jpg',
-    description: `A lego flower (2022)`,
-    originalHeight: '450px',
-    },
-    {
     original: 'images/line-segment-calculator-python.png',
     thumbnail: 'images/line-segment-calculator-python.png',
     description: `Sample output of a line segment calculator program in Python (2022)`,
